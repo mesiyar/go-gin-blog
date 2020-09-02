@@ -17,7 +17,7 @@ var MsgFlags = map[int]string {
 /**
 
  */
-func getMsg(code int) string  {
+func GetMsg(code int) string  {
 	msg, ok := MsgFlags[code]
 	if ok {
 		return msg
