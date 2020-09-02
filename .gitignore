@@ -1,0 +1,4 @@
+.idea
+pkg/mod/*
+pkg/sumdb/*
+pkg/windows_amd64/*
