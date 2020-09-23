@@ -2,3 +2,4 @@
 pkg/mod/*
 pkg/sumdb/*
 pkg/windows_amd64/*
+*.log
