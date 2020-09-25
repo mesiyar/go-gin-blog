@@ -1,6 +1,7 @@
 package routers
 
 import (
+	_ "gin-blog/src/gin-blog/docs"
 	"gin-blog/src/gin-blog/middleware/jwt"
 	"gin-blog/src/gin-blog/pkg/setting"
 	"gin-blog/src/gin-blog/routers/api"
@@ -20,6 +21,8 @@ func InitRouter() *gin.Engine {
 	gin.SetMode(setting.RunMode)
 
 	r.GET("/auth", api.GetAuth)
+	r.GET("/create_account", api.CreateAuth)
+
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	apiv1 := r.Group("/api/v1")

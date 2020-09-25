@@ -26,4 +26,25 @@ paths:
           schema:
             type: string
       summary: 新增文章标签
+  /auth:
+    get:
+      parameters:
+      - description: 用户名
+        in: query
+        name: username
+        required: true
+        type: string
+      - description: 密码
+        in: query
+        name: password
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{"token":""},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 获取认证
 swagger: "2.0"
